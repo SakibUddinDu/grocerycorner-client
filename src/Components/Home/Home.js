@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
 import GroceryItems from '../GroceryItems/GroceryItems';
 import Header from '../Header/Header';
 import './Home.css';
@@ -24,6 +25,11 @@ const Home = () => {
                     </form>
                 </div>  
         <div className="row">
+          {
+            groceryItems.length == 0 && <Spinner className="spinner" animation="border" role="status">
+            <span className="sr-only">Loading...</span>
+          </Spinner>
+          }
         
             {
                 groceryItems.map( groceryItem =><GroceryItems  groceryItem={groceryItem}></GroceryItems>)
