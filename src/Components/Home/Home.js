@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+// import { AdminPanelContext } from '../../App';
 import GroceryItems from '../GroceryItems/GroceryItems';
 import Header from '../Header/Header';
 import './Home.css';
@@ -6,6 +7,7 @@ import './Home.css';
 
 const Home = () => {
   const [groceryItems, setGroceryItems] = useState([])
+  // const [adminPanel, setAdminPanel] = useContext(AdminPanelContext)
 
   useEffect(() => {
     fetch('http://localhost:5000/products')

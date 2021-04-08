@@ -1,9 +1,11 @@
+import { faPencilAlt, faPlusSquare, faTasks } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from "axios";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import FakeData from "../../resources/FakeData/FakeData";
 import logo from "../../resources/icons/Group 33072.png";
 import "./AddProduct.css";
+
 
 const AddProduct = () => {
   // console.log(FakeData);
@@ -43,17 +45,17 @@ const AddProduct = () => {
       });
   };
 
-  const handleAddProduct = () => {
-    console.log("product added");
-    fetch("http://localhost:5000/addItems", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(FakeData),
-    });
-    // FakeData
-  };
+  // const handleAddProduct = () => {
+  //   console.log("product added");
+  //   fetch("http://localhost:5000/addItems", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(FakeData),
+  //   });
+  //   // FakeData
+  // };
 
   return (
     <div className="container">
@@ -63,17 +65,19 @@ const AddProduct = () => {
             <img style={{ width: "250px" }} src={logo} alt="" />
           </figure>
           <nav className="pl-5 mt-5 listStyle">
-            <li>Mange Product</li>
-            <li>&#43; Add Product</li>
-            <li>Edit Product</li>
+            <li> <FontAwesomeIcon icon={faTasks} />Mange Product</li>
+            <br/>
+            <li><FontAwesomeIcon icon={faPlusSquare} /> Add Product</li>
+            <br/>
+            <li>  <FontAwesomeIcon icon={faPencilAlt} /> Edit Product</li>
           </nav>
         </div>
         <div className="col-md-9">
-          <button onClick={handleAddProduct}>add Product</button>
+          {/* <button onClick={handleAddProduct}>add Product</button> */}
           <div className="from_area">
 
             <form className="pt-5 pl-5" onSubmit={handleSubmit(onSubmit)}>
-              <h3>Product Title</h3>
+              {/* <h3>Product Title</h3> */}
               <input
                 className="form-control"
                 name="name"
@@ -96,6 +100,7 @@ const AddProduct = () => {
               <input type="file" onChange={handleImgUpload} />
               <br />
               <br />
+              {/* <FontAwesomeIcon icon={faCloudUploadAlt} />  */}
               <input
                 className="btn btn-dark px-5"
                 type="submit"

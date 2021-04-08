@@ -60,7 +60,6 @@ const Login = () => {
           <h3 className="text-center my-4">Login</h3>
           <div className="btnStyle bg-primary d-flex justify-content-center">
             <button onClick={handleGoogleSignIn}>
-              {" "}
               <img className="img-fluid" src={googleIcon} alt="" />
               <span className="googleText">Continue With Google</span>
             </button>
