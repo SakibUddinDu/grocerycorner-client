@@ -13,7 +13,7 @@ const ManageProduct = () => {
   // console.log(adminPanel);
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://shielded-retreat-60482.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => setAdminPanelData(data));
   }, []);

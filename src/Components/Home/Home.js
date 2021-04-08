@@ -10,7 +10,7 @@ const Home = () => {
   // const [adminPanel, setAdminPanel] = useContext(AdminPanelContext)
 
   useEffect(() => {
-    fetch('http://localhost:5000/products')
+    fetch('https://shielded-retreat-60482.herokuapp.com/products')
     .then(res => res.json())
     .then(data => setGroceryItems(data) )
     // setGroceryItems(FakeData)

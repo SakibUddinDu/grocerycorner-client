@@ -14,14 +14,14 @@ const CheckOut = () => {
   console.log(product);
 
   useEffect(() => {
-    fetch("http://localhost:5000/product/" + _id)
+    fetch("https://shielded-retreat-60482.herokuapp.com/product/" + _id)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [_id]);
 
   const handleCheckOut = () =>{
     const productDetails = {...loggedInUser, ...product, orderTime: new Date()}
-    fetch("http://localhost:5000/addOrder", {
+    fetch("https://shielded-retreat-60482.herokuapp.com/addOrder", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

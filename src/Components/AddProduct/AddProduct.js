@@ -18,7 +18,7 @@ const AddProduct = () => {
       pic : imgURL,
       price: data.price
     };
-    const url = `http://localhost:5000/addProduct`;
+    const url = `https://shielded-retreat-60482.herokuapp.com/addProduct`;
     console.log(productData);
     fetch(url, {
       method: "POST",
@@ -47,7 +47,7 @@ const AddProduct = () => {
 
   // const handleAddProduct = () => {
   //   console.log("product added");
-  //   fetch("http://localhost:5000/addItems", {
+  //   fetch("https://shielded-retreat-60482.herokuapp.com/addItems", {
   //     method: "POST",
   //     headers: {
   //       "Content-Type": "application/json",
