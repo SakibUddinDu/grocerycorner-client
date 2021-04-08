@@ -20,7 +20,7 @@ const CheckOut = () => {
   }, [_id]);
 
   const handleCheckOut = () =>{
-    const productDetails = {...loggedInUser, ...product}
+    const productDetails = {...loggedInUser, ...product, orderTime: new Date()}
     fetch("http://localhost:5000/addOrder", {
       method: "POST",
       headers: {
@@ -30,10 +30,10 @@ const CheckOut = () => {
     })
     .then(res =>res.json())
     .then(data =>{
-      console.log(data);
-      // if(data){
-      //   alert('Order Placed Successfully')
-      // }
+      // console.log(data);
+      if(data){
+        alert('Order Placed Successfully')
+      }
     })
   }
 

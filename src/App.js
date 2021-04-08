@@ -9,6 +9,7 @@ import CheckOut from "./Components/CheckOut/CheckOut";
 import Home from './Components/Home/Home';
 import Login from "./Components/Login/Login";
 import NotFound from "./Components/NotFound/NotFound";
+import Orders from "./Components/Orders/Orders";
 import PrivetRoute from "./Components/PrivateRoute/PrivateRoute";
 
 export const UserContext = createContext();
@@ -34,23 +35,30 @@ const App = () => {
           <PrivetRoute path="/checkout/:_id">
             <CheckOut></CheckOut>
           </PrivetRoute>
+          <PrivetRoute path="/orders">
+            <Orders></Orders>
+          </PrivetRoute>
+          <PrivetRoute path="/admin">
+            <AddProduct></AddProduct>
+          </PrivetRoute>
           {/* <Route path="/checkout/:_id">
             <CheckOut></CheckOut>
           </Route> */}
+
          
-           
-               {/* <Route path="/userinfo">
-          <UserInfoData></UserInfoData>
-          </Route>
-          <PrivetRoute path="/register">
+{/*            
+             <Route path="/orders">
+        </Orders>
+          </Route> */}
+             {/*<PrivetRoute path="/register">
             <Register></Register>
           </PrivetRoute>
           <PrivetRoute path="/adminPanel">
             <AdminPanel></AdminPanel>
           </PrivetRoute>*/}
-          <Route path="/addProduct">
+          {/* <Route path="/addProduct">
             <AddProduct></AddProduct>
-          </Route> 
+          </Route>  */}
           <Route path="*">
             <NotFound></NotFound>
           </Route>
