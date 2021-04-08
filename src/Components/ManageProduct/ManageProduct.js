@@ -44,7 +44,7 @@ const ManageProduct = () => {
         </div>
         <div className="col-md-9 mt-5">
           <div className="from_area">
-            <table className="table table-borderless">
+            <table className="table">
               <thead>
                 <tr>
                   <th className="text-secondary text-left" scope="col">

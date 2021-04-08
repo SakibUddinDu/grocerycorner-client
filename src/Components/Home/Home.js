@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// import { AdminPanelContext } from '../../App';
 import GroceryItems from '../GroceryItems/GroceryItems';
 import Header from '../Header/Header';
 import './Home.css';
@@ -7,15 +6,13 @@ import './Home.css';
 
 const Home = () => {
   const [groceryItems, setGroceryItems] = useState([])
-  // const [adminPanel, setAdminPanel] = useContext(AdminPanelContext)
 
   useEffect(() => {
     fetch('https://shielded-retreat-60482.herokuapp.com/products')
     .then(res => res.json())
     .then(data => setGroceryItems(data) )
-    // setGroceryItems(FakeData)
   }, [])
-// console.log(FakeData);
+
 
     return (
       <div>
